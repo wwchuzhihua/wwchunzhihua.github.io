@@ -22,7 +22,7 @@
 
   
 
-  <title>Hello World | Hexo</title>
+  <title>第一天 | Hexo</title>
 
   
 
@@ -96,11 +96,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Hello World</h1>
+          <h1 class="title-wrap">第一天</h1>
           <h2 class="title-sub-wrap">
             <strong>John Doe</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-12-07T12:46:24.837Z" itemprop="datePublished">2021-12-07</time>
+            <time  class="article-date" datetime="2021-12-08T08:16:35.685Z" itemprop="datePublished">2021-12-08</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -129,25 +129,38 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <p>FusionManager:<br>    1、统一管理简化运维<br>    2、对vm实现批量的管理<br>    3、实现对虚拟化和物理资源的监控警告<br>    4、支持异构管理（只兼容VMware）<br>VRM：下发指令<br>CAN：执行指令<br>    VNA：与VRM交互的组件<br>    UVP：hyperisor 进行虚拟化的组件</p>
+<p>FusionCompute：<br>    架构：<br>        VRM：对虚拟化资源和物理资源的统一管理、提供WEBUI、监控告警功能<br>            部署;<br>                主备部署提高可靠性<br>            部署形态：<br>                虚拟机：运行在CNA主机上，主机小于50台<br>                物理机部署：运行在物理主机上，大于50台<br>        CNA：提供虚拟化的能力，管理本节点的虚拟化、物理资源<br>            VNA：与VRM通信<br>            UVP：主要实行虚拟化能力<br>为了保证可靠性，会做链路冗余<br>    1、交互机，两台交互机做堆叠或M-LAG<br>    2、服务器端口网卡做BOND<br>        主备：bond1，两个网卡做bond之后，只有主端口收发数据，备端口不工作（端口不需要最配置）<br>        负载均衡：bond4.bond内所以端口都可以收发数据（需要在对应的交换机上对端口做链路聚合）</p>
+<p>服务器网络平面的规划<br>    2网口：两个网卡做bond承载管理业务存储<br>    4网口：两两bond，一组承载管理业务bond，一组承载存储bond<br>    6网口：两两bond，分别承载管理、业务、存储<br>计算虚拟化管理<br>    虚拟机生命周期<br>        创建/删除/回收<br>        关闭/启动/下电<br>        暂停/恢复<br>        休眠/唤醒<br>        重启/强制重启<br>        克隆<br>        迁移/异构CPU热迁移<br>        快照<br>        备份/恢复<br>        磁盘迁移<br>    虚拟资源管理<br>        数据中心、集群、主机、虚拟机分层管理<br>        虚拟机文件夹逻辑分组管理<br>        虚拟机分权管理<br>        主机组<br>        模板管理<br>    虚拟资源配置管理<br>        虚拟机资源在线调整<br>        GPU直通SRIOV<br>        虚拟机启动策略<br>        虚拟机光驱<br>        虚拟机USB<br>        内存复用\QoS<br>        CPU超分\QoS<br>        NUMA调度支持</p>
+<pre><code>在线调整cpu和内存
+   技术原理
+    vRAM，vCPU离线添加/删除，在线添加
+   技术特点
+    虚拟机运行时调整CPU和内存规格，虚拟机不需
+    要重启即可生效;同时，对于不支持在线生效的
+    操作系统，则需要重启才能生效。
+    适用场景
+    根据业务需要，灵活调整虚拟机的CPU、内存配
+    置
+    应用价值
+    根据虚拟机的需求，灵活调整其配置
+    纵向扩展有效保证单个虚拟机QoS
+    与横向扩展有机结合，保证集群QoS
+</code></pre>
+<p>在线调整CPU（动态资源调整、热插拔）：对VM硬件修改之后，不重启，直接生效，不影响业务。<br>       调整的主要对象指CPU和内存，磁盘也支持<br>内存复用技术<br>    内存共享：虚拟机之间共享同一物理内存空间<br>    写时复制：当虚拟机需要对内存进行写操作时开辟另一内存空间，并修改映射</p>
+<pre><code>内存置换
+    虚拟机长时间未访问的内存内容被置换到存储中，当虚拟机再次访问该内存内容时再置换回来
+    
+内存气泡：
+    将较为空闲的虚拟机内存释放给内存使用率较高的虚拟机，从而提升内存利用率
+</code></pre>
 
       </section>
 
       
       
         <nav class="article-nav">
+          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
@@ -158,11 +171,10 @@
           <h2 class="card-text--title text-ellipsis">测试</h2>
         </a>
       
-      <div class="card-text--row">Newer</div>
+      <div class="card-text--row">Older</div>
     </div>
   </article>
 </div>
-          
           
         </nav>
       
