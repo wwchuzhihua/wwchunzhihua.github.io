@@ -22,7 +22,7 @@
 
   
 
-  <title>message | 椿之花丶的博客</title>
+  <title>第二天 | 椿之花丶的博客</title>
 
   
 
@@ -43,9 +43,9 @@
   <div class="root-container">
     
 <!-- header container -->
-<header class="header-container">
+<header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg)"></div>
+    <div class="post-image" style="background-image: url(https://s3.bmp.ovh/imgs/2021/12/c5a9a428947d94be.jpg)"></div>
   
 
   <!-- navbar -->
@@ -93,36 +93,111 @@
 
   
   
-
-  
-  
     <div class="header-content">
-      <div class="post-text layout-block layout-padding">
-        <h1 class="title-wrap">message</h1>
-        
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">第二天</h1>
+          <h2 class="title-sub-wrap">
+            <strong>John Doe</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2021-12-09T07:56:06.797Z" itemprop="datePublished">2021-12-09</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+</ul>
+        </div>
       </div>
     </div>
+  
+
+  
   
   
 </header>
 
-    <!-- 分页(其他自定义页面) -->
+    <!-- 文章 -->
 
-<!-- 自定义页面 -->
-
+<!-- 文章内容 -->
 <div class="body-container">
   <article class="content-container layout-block post-container">
     <div class="article-info">
       
+      
+      
+      
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        
+        <p>vcpu计算<br>物理CPU<br>物理内核<br>逻辑cpu（超线程）：一个物理内核对应2个逻辑CPU<br>VCPU=物理CPU个数<em>物理内核</em>2</p>
+<p>NUMA：为vm分配CPU和内存时使用同一nod内资源，保证vm性能最优。</p>
+<p>为什么内存复用和NUMA互斥？</p>
+<p>虚拟机HA：<br>    应用场景<br>    虚拟机所在主机故障时，将故障主机上的虚拟机迅速在另一个主机上<br>    启动，达到虚拟机高可用。</p>
+<p>关键技术&amp;价值特性<br>支持主机、虚拟平台、虚拟机内部多种故障场景的检测和虚拟机恢复</p>
+<p>支持多种集群HA策略设置，保障集群中虚拟机故障恢复成功率或对<br>集群的虚拟机故障恢复能力进行预警</p>
+<p>支持共享存储与本地存储虚拟机HA</p>
+<p>大幅提升故障恢复速度， 降低业务中断时间、保障业务连续性、实现<br>一定的系统自维护</p>
+<p>自动负载均衡（DRS）<br>技术特点</p>
+<p>根据调度策略自动实现集群内虚拟机负载相对均衡</p>
+<p>兼顾虚拟机负载变化趋势,避免震荡迁移</p>
+<p>独有的调度基线设置功能，避免无用迁移</p>
+<p>可针对特殊要求的虚拟机设置例外不调度或手动调度</p>
+<p>支持管理员即时手动调度和按策略周期性自动调度</p>
+<p>可按每天、每周、每月选择时间段精确设置调度策略</p>
+<p>应用场景&amp;客户价值</p>
+<p>适用于虚拟机业务负载具有较明显的持续性波峰和波谷变化，用户需要</p>
+<p>获取更好的性能体验的场景</p>
+<p>通过动态调度虚拟机，使各主机的资源利用率更加均衡，各主机的计算</p>
+<p>能力发挥更加充分，各虚拟机上的业务系统运行的效率更高<br>自动绿色节能（DPM）<br>        技术特点</p>
+<p>系统根据用户设定的DPM策略，将低负载主机上的虚拟机迁移走并对</p>
+<p>该主机下电、对于负载超过设置阈值的主机，系统智能选择一定数量<br>的主机对其上电,以实现集群内主机整体的负载分担</p>
+<p>可智能选择对1台还是多台主机同时进行上、下电</p>
+<p>DPM和DRS同时考虑，避免两种功能相互影响</p>
+<p>可按每天、每周、每月的时间段精确设置调度策略</p>
+<p>应用场景&amp;客户价值<br>适用于虚拟机的业务负载具有较明显的持续性波峰和波谷变化,用户需要节省能耗的场景</p>
+<p>在保证业务系统正常运行的前提下，在业务负荷波谷阶段将虚拟机迁移整合到部分主机上，将空闲出来的主机智能下电，节省了系统能耗;在业务负载波峰阶段对下电的主机进行上电，以保证虚拟机的运行效率和业务体验</p>
+<p>热迁移：将运行的VM从一台主机迁移到另外一台主机，迁移的过程无丢失，用户无感知。<br>    限制条件：<br>        1、需要使用共享储存<br>        2、目的主机需要关联VM所在的DVS<br>        3、VM没有绑定的主机、硬件或直通设备<br>        4、源目主机CPU型号一致，当为不同代的CPU主机间迁移时保证开启IMC策略<br>        5、夸集群迁移保证内存复用开关一致<br>        6、vm需要处于运行状态<br>实现原理：<br>        内存分片+迭代迁移</p>
+<p>动态资源调度DRS(Dynamic Resource Scheduler),指采用智能负载均衡调度算法，通过周期性检测内不同的主机间的负载均衡，并最大程度降低系统的功耗。</p>
+<p>手动或自动执行</p>
+<p>DPM：系统根据用户设定的DPM策略，将低负载主机上的虚拟机迁移走并对该主机下电、对于负载</p>
+<p>负载分担<br>            需要DRS支持、需要服务器配置BMC卡，并在VRM上配置BMC的信息<br>            手动或自动执行<br>        调度规则<br>            聚集虚拟机<br>            互斥虚拟机<br>            虚拟机到主机<br>            优先级<br>                DPM&gt;调度规则&gt;DRS</p>
+
       </section>
 
       
       
+        <nav class="article-nav">
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2021/12/08/%E7%AC%AC%E4%B8%80%E5%A4%A9/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">第一天</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
 
-      
-      
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
     </div>
     <div class="widget-info">
       <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -159,6 +234,8 @@
     </div>
   </div>
 </section>
+
+      
 
       
 <section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -204,7 +281,6 @@
     </div>
   </article>
 </div>
-
 
     <!-- footer container -->
 <footer id="footer" class="footer">
@@ -257,7 +333,70 @@
   <!-- aplayer -->
 
 
+  <!-- aplayer 音频 start -->
+  <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+  <script type="text/javascript" src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <script type="text/javascript">
+    const aplayer = document.querySelectorAll(".aplayer-box");
+    aplayer && initaplayer(aplayer);
+    function initaplayer(els) {
+      let elsArr = Array.from(els);
+      elsArr.forEach(el => {
+        let params = {
+          container: el,
+          audio: { ...el.dataset },
+          theme: "#b7daff",
+          autoplay: false,
+          loop: false,
+          mutex: true,
+        }
+        if (el.dataset.lrc) {
+          params['lrcType'] = 3
+        }
+        new APlayer(params);
+      });
+    }
+  </script>
+  <!-- aplayer 音频 end -->
+  
+
+
 <!-- dplayer -->
+
+
+<!-- dplayer 视频 start -->
+<script type="text/javascript" src="https://unpkg.com/hls.js@1.0.1/dist/hls.js"></script>
+<script type="text/javascript" src="https://unpkg.com/dplayer@1.25.1/dist/DPlayer.min.js"></script>
+<script type="text/javascript">
+  const dplayer = document.querySelectorAll(".dplayer-box");
+  dplayer && initDPlayer(dplayer);
+  function initDPlayer(els) {
+    let elsArr = Array.from(els);
+    elsArr.forEach(el => {
+      let url = el.dataset.url;
+      let pic = el.dataset.pic;
+      let subtitle = el.dataset.subtitle;
+
+      let options = {
+        container: el,
+        video: { url: url, pic: pic },
+        theme: "#b7daff",
+        autoplay: false,
+        loop: false,
+        mutex: true,
+      }
+
+      if (subtitle) {
+        options.subtitle = {
+          url: el.dataset.subtitle,
+        }
+      }
+      new DPlayer(options);
+    });
+  }
+</script>
+<!-- dplayer 视频 end -->
+
 
 
 
