@@ -22,7 +22,7 @@
 
   
 
-  <title>Hello World | 椿之花丶的博客</title>
+  <title>第三天 | 椿之花丶的博客</title>
 
   
 
@@ -45,7 +45,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg)"></div>
+    <div class="post-image" style="background-image: url(https://tva2.sinaimg.cn/large/005JCXHQly8gxcad9hz5bj30u00qywi1.jpg)"></div>
   
 
   <!-- navbar -->
@@ -96,11 +96,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">Hello World</h1>
+          <h1 class="title-wrap">第三天</h1>
           <h2 class="title-sub-wrap">
             <strong>John Doe</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-12-07T12:46:24.837Z" itemprop="datePublished">2021-12-07</time>
+            <time  class="article-date" datetime="2021-12-10T05:17:55.103Z" itemprop="datePublished">2021-12-10</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -129,19 +129,34 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <p>FusionCompute存储<br>    模型：<br>        存储资源<br>        存储设备<br>        数据存储：只有数据存储可以用来发放虚拟机</p>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+    <figure class="figure-image">
+      <img src="https://tva3.sinaimg.cn/large/005JCXHQly8gxcafdkutgj30vo0jcgof.jpg" alt="" loading="lazy" />
+      <figcaption></figcaption>
+    </figure>
+  
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>磁盘类型：普通、共享<br>配置模式：<br>    普通<br>    普通延迟置零<br>    精简<br>磁盘模式：<br>    从属：支持快照，数据持久存储<br>    独立-持久：不支持快照，数据持久存储<br>    独立-非持久：不支持快照，关机或重启数据丢失<br>    独立应用场景：共享盘会配置独立模式<br>判断是否是虚拟化存储：转为数据存储时，是否会格式化文件系统。做文件系统为虚拟化存储，不做文件系统为非虚拟化</p>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <figure class="figure-image">
+      <img src="https://tva3.sinaimg.cn/large/005JCXHQly8gxcah5z1l3j30fd0cljrq.jpg" alt="" loading="lazy" />
+      <figcaption></figcaption>
+    </figure>
+  
+
+<p>虚拟化、非虚拟化、裸设备映射之间的区别</p>
+<p>快照：某一时刻虚拟机可用数据的定格（虚拟机配置文件和磁盘文件）<br>实现原理：父卷+差分卷（ROW）父卷只读，差异数据写入差分磁盘中</p>
+
+    <figure class="figure-image">
+      <img src="https://tva3.sinaimg.cn/large/005JCXHQly8gxc9pliebdj30fy0bn0t4.jpg" alt="" loading="lazy" />
+      <figcaption></figcaption>
+    </figure>
+  
+
+
+<p>删除快照后，数据的变化：<br>    1、从底层删除数据快照3，C’E会直接被删除<br>    2、从VRM上删除快照3，快照3中的数据会像快照4合并，有依赖关系的数据会被保留，没有依赖关系会被删除</p>
 
       </section>
 
@@ -149,22 +164,22 @@
       
         <nav class="article-nav">
           
+          
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://tva3.sinaimg.cn/large/005JCXHQly8gx6m4n8sslj31900u043i.jpg"></div>
+      <div class="card-cover" background-image-lazy data-img="https://s3.bmp.ovh/imgs/2021/12/c5a9a428947d94be.jpg"></div>
     
     <div class="card-text">
       
-        <a href="/2021/12/08/%E6%B5%8B%E8%AF%95/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">测试</h2>
+        <a href="/2021/12/09/%E7%AC%AC%E4%BA%8C%E5%A4%A9/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">第二天</h2>
         </a>
       
-      <div class="card-text--row">Newer</div>
+      <div class="card-text--row">Older</div>
     </div>
   </article>
 </div>
-          
           
         </nav>
       
