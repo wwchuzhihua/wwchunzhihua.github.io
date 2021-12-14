@@ -129,7 +129,7 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>FusionCompute存储<br>    模型：<br>        存储资源<br>        存储设备<br>        数据存储：只有数据存储可以用来发放虚拟机</p>
+        <p>FusionCompute存储<br>    模型：<br>        存储资源<br>            NAS：自带文件系统，有cfs、cifs<br>            SAN：vims一种高性能的集群文件系统，使用时先将数据存储格式化成VIMS格式，然后挂载到CNA上进行使用<br>            DusionStorage：以非虚拟化的方式使用，没有文件系统<br>        存储设备<br>            本地硬盘：ext4<br>        数据存储：只有数据存储可以用来发放虚拟机</p>
 
     <figure class="figure-image">
       <img src="https://tva3.sinaimg.cn/large/005JCXHQly8gxcafdkutgj30vo0jcgof.jpg" alt="" loading="lazy" />
@@ -157,12 +157,29 @@
 
 
 <p>删除快照后，数据的变化：<br>    1、从底层删除数据快照3，C’E会直接被删除<br>    2、从VRM上删除快照3，快照3中的数据会像快照4合并，有依赖关系的数据会被保留，没有依赖关系会被删除</p>
+<p>DVS：逻辑上存在，主要进行配置下发和统一管理<br>OVS：运行在CNA内的虚拟交换机，完成端口生命周期创建，数据转发<br>    内核态交换，CPU消耗比较大，兼容好<br>EVS：基于ovs的增强，需要特殊网卡的支持，用户态交换，性能比较好<br>SRIOV直通：需要网卡支持虚拟化，将vf直通给vm使用，性能最好</p>
 
       </section>
 
       
       
         <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://s3.bmp.ovh/imgs/2021/12/6c06493e3582b5e3.jpg"></div>
+    
+    <div class="card-text">
+      
+        <a href="/2021/12/14/%E7%AC%AC%E5%9B%9B%E5%A4%A9/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">第四天</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
           
           
             <div class="article-nav-item layout-padding">
@@ -215,7 +232,7 @@
         <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
 </svg>
-        <span>5</span>
+        <span>6</span>
       </div>
       <div class="count-box--item">
         <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
